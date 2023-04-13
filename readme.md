@@ -34,3 +34,17 @@ pip install -r requirements.txt
 4. click "DELETE"
 5. Click "COPY" 
 6. Enjoy !
+
+
+## For Windows User ( How to Deploy )
+
+1. install pyinstaller
+```cmd
+pip install pyinstaller
+```
+2. run cmd in the same folder as the project ( where header_parser_offi exist ) and run :
+```cmd
+pyinstaller main.spec
+```
+3. Go to the folder dist and run .exe
+4. Enjoy !

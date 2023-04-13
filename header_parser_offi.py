@@ -23,11 +23,23 @@ __status__ = "Production"
 import pyperclip
 # For Searching for options in header ( From . To ... )
 import re
+
+import os
+
 # =======================
 # Local Libs
 # =======================
 # contain all
 import tkinter_tools as tkt
+
+
+def resource_path(relative_path):
+    try:
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
 
 
 def mail_header_detector(input):
@@ -56,7 +68,7 @@ def app(root):
     :return:
     """
     # The Image of the Header
-    tkt.image_include(root, "header.png", 0, 0)
+    tkt.image_include(root, resource_path("header.png"), 0, 0)
 
     # TEXTBOX
     tkt.fast_label(root, 2, 134, "HEADER TO BE MODIFIED :", 11)
@@ -259,7 +271,7 @@ class HeaderParser:
         # the Logic of the app
         app(self.root)
         # import the image
-        icon = tkt.PhotoImage(file='icon.png')
+        icon = tkt.PhotoImage(file=resource_path('icon.png'))
         # set up the image as icon
         self.root.iconphoto(False, icon)
         # the mainloop with fixed width and height
