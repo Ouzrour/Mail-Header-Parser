@@ -42,9 +42,10 @@ pip install -r requirements.txt
 ```cmd
 pip install pyinstaller
 ```
-2. run cmd in the same folder as the project ( where header_parser_offi exist ) and run :
+2. Open The file "main.spec" and change the path "E:\\mailing\\2. Header Generator\\" to the absolute path where the application is !
+3. run cmd in the same folder as the project ( where header_parser_offi exist ) and run :
 ```cmd
 pyinstaller main.spec
 ```
-3. Go to the folder dist and run .exe
-4. Enjoy !
+4. Go to the folder dist and run .exe
+5. Enjoy !
